@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Hakim Socials & Hikam AI Office</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #030712;
+            color: #f3f4f6;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            background: radial-gradient(circle at 50% 10%, #1e1b4b 0%, #090d16 50%, #030712 100%);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+        }
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+        }
+        .gojo-glow-text {
+            text-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen text-gray-100 pb-12" id="main-body">
+
+    <div class="relative z-10 max-w-xl mx-auto px-4 py-6">
+
+        <!-- Top Bar / Admin Access Button -->
+        <div class="flex justify-between items-center mb-6">
+            <span class="text-xs uppercase tracking-widest text-blue-400 font-bold flex items-center gap-1.5">
+                <i class="fa-solid fa-infinity text-blue-500"></i> Hakim Ecosystem
+            </span>
+            <button onclick="openPasscodeModal()" class="text-xs bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-3.5 py-1.5 rounded-full font-bold transition shadow-lg shadow-blue-500/20 flex items-center gap-1.5">
+                <i class="fa-solid fa-key text-yellow-300"></i> Panel Admin
+            </button>
+        </div>
+
+        <!-- Profil Header -->
+        <div class="text-center mb-6">
+            <div class="relative w-24 h-24 mx-auto mb-3 rounded-full bg-gradient-to-tr from-cyan-500 via-blue-600 to-indigo-600 p-1 glow-effect flex items-center justify-center">
+                <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-bolt-lightning text-3xl text-blue-400 gojo-glow-text"></i>
+                </div>
+            </div>
+            <h1 id="display-profile-name" class="text-2xl font-black tracking-wide text-white gojo-glow-text">HAKIM OFFICIAL HUB</h1>
+            <p class="text-xs text-blue-300 mt-1">Socials • Majalah • Store FF • Nomer WA • Hikam AI</p>
+        </div>
+
+        <!-- Navigation Menu Tabs -->
+        <div class="grid grid-cols-5 gap-1 mb-6 bg-slate-900/80 p-1.5 rounded-2xl border border-slate-800 text-center">
+            <button onclick="switchTab('socials')" id="tab-btn-socials" class="py-2 px-1 text-[11px] font-bold rounded-xl bg-blue-600 text-white transition glow-effect">
+                <i class="fa-solid fa-share-nodes block mb-0.5"></i> Socials
+            </button>
+            <button onclick="switchTab('magazine')" id="tab-btn-magazine" class="py-2 px-1 text-[11px] font-bold rounded-xl text-gray-400 hover:text-white transition">
+                <i class="fa-solid fa-book-quran block mb-0.5"></i> Majalah
+            </button>
+            <button onclick="switchTab('storeff')" id="tab-btn-storeff" class="py-2 px-1 text-[11px] font-bold rounded-xl text-gray-400 hover:text-white transition">
+                <i class="fa-solid fa-gamepad block mb-0.5"></i> Akun FF
+            </button>
+            <button onclick="switchTab('nomorwa')" id="tab-btn-nomorwa" class="py-2 px-1 text-[11px] font-bold rounded-xl text-gray-400 hover:text-white transition">
+                <i class="fa-brands fa-whatsapp block mb-0.5"></i> Nomer WA
+            </button>
+            <button onclick="switchTab('hikamai')" id="tab-btn-hikamai" class="py-2 px-1 text-[11px] font-bold rounded-xl text-gray-400 hover:text-white transition">
+                <i class="fa-solid fa-brain block mb-0.5 text-cyan-400"></i> Hikam AI
+            </button>
+        </div>
+
+        <!-- TAB 1: WEB SOCIALS -->
+        <div id="section-socials" class="space-y-3">
+            <div class="text-xs font-bold text-blue-400 uppercase tracking-wider px-1 pt-1"><i class="fa-solid fa-globe"></i> Web Social Khusus</div>
+
+            <a id="link-wa" href="https://wa.me/6281234567890" target="_blank" class="glass-card rounded-2xl p-3.5 flex items-center justify-between hover:border-emerald-400 transition transform hover:-translate-y-0.5">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white">WhatsApp & Grup Utama</h3>
+                        <p class="text-xs text-gray-400">Hubungi admin & gabung komunitas WA</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </a>
+
+            <a id="link-discord" href="https://discord.gg/yourinvite" target="_blank" class="glass-card rounded-2xl p-3.5 flex items-center justify-between hover:border-indigo-400 transition transform hover:-translate-y-0.5">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl"><i class="fa-brands fa-discord"></i></div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white">Discord Server</h3>
+                        <p class="text-xs text-gray-400">Gabung mabar, voice chat & komunitas</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </a>
+
+            <a id="link-ig" href="https://instagram.com/yourusername" target="_blank" class="glass-card rounded-2xl p-3.5 flex items-center justify-between hover:border-pink-500 transition transform hover:-translate-y-0.5">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl"><i class="fa-brands fa-instagram"></i></div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white">Instagram Official</h3>
+                        <p class="text-xs text-gray-400">Info, update & testimoni</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </a>
+
+            <a id="link-tiktok" href="https://tiktok.com/@yourusername" target="_blank" class="glass-card rounded-2xl p-3.5 flex items-center justify-between hover:border-cyan-400 transition transform hover:-translate-y-0.5">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl"><i class="fa-brands fa-tiktok"></i></div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white">TikTok Content</h3>
+                        <p class="text-xs text-gray-400">Video editor & highlights gaming</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </a>
+        </div>
+
+        <!-- TAB 2: WEB MAJALAH ISLAMI -->
+        <div id="section-magazine" class="hidden space-y-4">
+            <div class="glass-card rounded-2xl p-5 border border-amber-500/30">
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center"><i class="fa-solid fa-kaaba text-sm"></i></div>
+                    <h2 class="text-base font-bold text-amber-300">Keteladanan Nabi Muhammad SAW</h2>
+                </div>
+                <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                    Nabi Muhammad SAW adalah pembawa risalah Islam yang memiliki akhlak agung, penyayang kepada umatnya, serta teladan sempurna dalam kepemimpinan dan kejujuran (*Al-Amin*).
+                </p>
+                <div class="bg-slate-900/80 p-3.5 rounded-xl border border-amber-500/20 mb-3 text-right">
+                    <p class="text-base font-serif text-amber-200 leading-loose mb-1">وَمَآ أَرْسَلْنَٰكَ إِلاَّ رَحْمَةً لِّلْعَٰلَمِينَ</p>
+                    <p class="text-[11px] text-gray-400 text-left italic">"Dan Kami tidak mengutus engkau (Muhammad), melainkan untuk (menjadi) rahmat bagi seluruh alam." <br><span class="text-amber-400 font-semibold">(QS. Al-Anbiya: 107)</span></p>
+                </div>
+                <div class="bg-blue-950/40 p-3 rounded-xl border border-blue-500/20">
+                    <div class="text-[11px] text-blue-300 font-bold mb-1"><i class="fa-solid fa-hands-praying"></i> Shalawat Nabi:</div>
+                    <p class="text-sm font-serif text-center text-blue-100 my-1">اللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ</p>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5 border border-cyan-500/30">
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center"><i class="fa-solid fa-book-bookmark text-sm"></i></div>
+                    <h2 class="text-base font-bold text-cyan-300">Perjuangan Imam Bukhari</h2>
+                </div>
+                <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                    Penyusun kitab Shahih Bukhari yang sangat teliti dalam menyeleksi hadits shahih. Beliau menghabiskan hidupnya demi menjaga kemurnian sunnah Rasulullah SAW.
+                </p>
+                <div class="bg-slate-900/80 p-3.5 rounded-xl border border-cyan-500/20 mb-3 text-right">
+                    <p class="text-sm font-serif text-cyan-200 leading-loose mb-1">إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ</p>
+                    <p class="text-[11px] text-gray-400 text-left italic">"Sesungguhnya amal itu tergantung niatnya..." <br><span class="text-cyan-400 font-semibold">(HR. Bukhari No. 1)</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: WEB SHOP AKUN FF (DINAMIS DARI ADMIN) -->
+        <div id="section-storeff" class="hidden space-y-3">
+            <div class="text-xs font-bold text-blue-400 uppercase tracking-wider px-1 pt-1"><i class="fa-solid fa-gamepad"></i> Web Shop Jual Beli Akun FF</div>
+            <div id="ff-list" class="space-y-3">
+                <!-- Data akan dimuat otomatis dari localStorage -->
+            </div>
+        </div>
+
+        <!-- TAB 4: WEB KHUSUS BELI NOMER WA (DINAMIS DARI ADMIN) -->
+        <div id="section-nomorwa" class="hidden space-y-3">
+            <div class="text-xs font-bold text-blue-400 uppercase tracking-wider px-1 pt-1"><i class="fa-brands fa-whatsapp"></i> Web Khusus Beli Nomer WA</div>
+            <div id="wa-list" class="space-y-3">
+                <!-- Data akan dimuat otomatis dari localStorage -->
+            </div>
+        </div>
+
+        <!-- TAB 5: HIKAM OFFICE AI (GOOGLE AI STUDIO CONNECTED) -->
+        <div id="section-hikamai" class="hidden space-y-3">
+            <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider px-1 pt-1 flex items-center justify-between">
+                <span><i class="fa-solid fa-brain"></i> Hikam Office AI (Gemini Studio)</span>
+                <span id="ai-status" class="text-[10px] bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">Ready Online</span>
+            </div>
+
+            <div class="glass-card rounded-2xl p-4 flex flex-col h-[400px] border border-cyan-500/40">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-cyan-400 animate-pulse"></div>
+                        <span class="text-xs font-bold text-white">Hikam Office Assistant</span>
+                    </div>
+                    <span class="text-[10px] text-gray-400">Tanya apa saja tentang dunia!</span>
+                </div>
+
+                <div id="chat-messages" class="flex-1 overflow-y-auto space-y-3 pr-1 text-xs">
+                    <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800 text-gray-200 max-w-[85%]">
+                        Halo! Saya **Hikam Office**, AI Assistant pintar yang terhubung ke Google AI Studio. Saya bisa menjawab pertanyaan apa saja di dunia ini—mulai dari ilmu pengetahuan, agama, coding, hingga curhat! Silakan ketik pertanyaan Anda.
+                    </div>
+                </div>
+
+                <div class="pt-3 border-t border-slate-800 flex gap-2">
+                    <input type="text" id="ai-input" placeholder="Tulis pertanyaan apa saja..." onkeypress="if(event.key==='Enter') sendAiMessage()" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-cyan-500 outline-none">
+                    <button onclick="sendAiMessage()" class="bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition glow-effect">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center text-[11px] text-gray-500 mt-10">
+            © 2026 Hakim Hub. Powered by Google AI Studio & Gojo Theme.
+        </div>
+    </div>
+
+    <!-- MODAL INPUT PASSCODE -->
+    <div id="modal-passcode" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-sm rounded-2xl p-6 relative border border-blue-500/50 text-center glow-effect">
+            <button onclick="closePasscodeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center text-xl border border-blue-500/40"><i class="fa-solid fa-shield-halved"></i></div>
+            <h2 class="text-base font-bold text-white mb-1">Akses Panel Admin</h2>
+            <p class="text-xs text-gray-400 mb-4">Masukkan Passcode Keamanan:</p>
+            <input type="password" id="input-key" placeholder="Ketik Passcode..." class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-center text-white text-sm focus:border-blue-500 outline-none mb-3">
+            <p id="error-msg" class="text-[11px] text-red-400 font-semibold mb-3 hidden"><i class="fa-solid fa-circle-exclamation mr-1"></i> Passcode Salah!</p>
+            <div class="flex gap-2">
+                <button onclick="closePasscodeModal()" class="flex-1 bg-slate-800 hover:bg-slate-700 text-gray-300 text-xs font-bold py-2.5 rounded-xl transition">Batal</button>
+                <button onclick="checkPasscode()" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold py-2.5 rounded-xl transition glow-effect">Masuk</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PANEL ADMIN LENGKAP (CMS MANAGEMENT) -->
+    <div id="modal-admin" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-lg rounded-2xl p-6 relative border border-blue-500/50 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+
+            <div class="flex items-center gap-2 mb-4">
+                <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center"><i class="fa-solid fa-sliders text-xs"></i></div>
+                <h2 class="text-sm font-bold text-white">Dashboard Admin CMS (Hakim Hub)</h2>
+            </div>
+
+            <!-- Tab Admin Menu -->
+            <div class="grid grid-cols-4 gap-1 mb-4 bg-slate-900 p-1 rounded-xl text-center text-[10px] font-bold">
+                <button onclick="switchAdminTab('tools')" id="adm-btn-tools" class="py-1.5 rounded-lg bg-blue-600 text-white">Tools & Profil</button>
+                <button onclick="switchAdminTab('socials')" id="adm-btn-socials" class="py-1.5 rounded-lg text-gray-400 hover:text-white">Social Links</button>
+                <button onclick="switchAdminTab('shop')" id="adm-btn-shop" class="py-1.5 rounded-lg text-gray-400 hover:text-white">Shop Produk</button>
+                <button onclick="switchAdminTab('ai')" id="adm-btn-ai" class="py-1.5 rounded-lg text-gray-400 hover:text-white">AI Engine</button>
+            </div>
+
+            <!-- ADMIN TAB 1: TOOLS & PROFIL -->
+            <div id="adm-section-tools" class="space-y-3 text-xs">
+                <div class="bg-slate-900/80 p-3 rounded-xl border border-blue-500/30">
+                    <label class="block text-blue-300 font-bold mb-1"><i class="fa-solid fa-image mr-1"></i> Ganti Background Website (Dari Galeri HP)</label>
+                    <input type="file" id="bg-file-input" accept="image/*" onchange="changeBackground(event)" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-white text-xs file:mr-3 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-blue-600 file:text-white hover:file:bg-blue-500 outline-none cursor-pointer">
+                </div>
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-1">Nama Web / Judul Browser</label>
+                    <input type="text" id="input-web-title" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                </div>
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-1">Nama Profil Utama</label>
+                    <input type="text" id="input-profile-name" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                </div>
+                <button onclick="saveTools()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 rounded-lg transition">Simpan Pengaturan Tools</button>
+            </div>
+
+            <!-- ADMIN TAB 2: SOCIAL LINKS -->
+            <div id="adm-section-socials" class="space-y-3 text-xs hidden">
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-1">Link WhatsApp Utama</label>
+                    <input type="text" id="input-link-wa" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                </div>
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-1">Link Discord Server</label>
+                    <input type="text" id="input-link-discord" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                </div>
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-1">Link Instagram</label>
+                    <input type="text" id="input-link-ig" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                </div>
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-1">Link TikTok</label>
+                    <input type="text" id="input-link-tiktok" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                </div>
+                <button onclick="saveSocials()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 rounded-lg transition">Simpan Tautan Sosial</button>
+            </div>
+
+            <!-- ADMIN TAB 3: SHOP PRODUK (FF & NOMOR WA) -->
+            <div id="adm-section-shop" class="space-y-3 text-xs hidden">
+                <div class="border-b border-slate-800 pb-2">
+                    <p class="font-bold text-amber-400 mb-1">Tambah Produk Akun FF Baru</p>
+                    <input type="text" id="shop-ff-name" placeholder="Nama Akun FF" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 mb-1.5 text-white outline-none">
+                    <input type="text" id="shop-ff-price" placeholder="Harga (Cth: Rp 150.000)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 mb-1.5 text-white outline-none">
+                    <button onclick="addFFProduct()" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-1.5 rounded-lg">Tambah ke Katalog FF</button>
+                </div>
+                <div>
+                    <p class="font-bold text-emerald-400 mb-1">Tambah Produk Nomor WA Baru</p>
+                    <input type="text" id="shop-wa-name" placeholder="Jenis Nomor WA (Cth: Nomer OTP Indo)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 mb-1.5 text-white outline-none">
+                    <input type="text" id="shop-wa-price" placeholder="Harga (Cth: Rp 10.000)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 mb-1.5 text-white outline-none">
+                    <button onclick="addWAProduct()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-1.5 rounded-lg">Tambah ke Katalog Nomer WA</button>
+                </div>
+            </div>
+
+            <!-- ADMIN TAB 4: AI ENGINE CONFIG -->
+            <div id="adm-section-ai" class="space-y-3 text-xs hidden">
+                <div class="bg-slate-900 p-3 rounded-xl border border-cyan-500/30">
+                    <label class="block text-cyan-300 font-bold mb-1">Google AI Studio API Key</label>
+                    <input type="password" id="input-gemini-key" placeholder="Tempel API Key Gemini di sini..." class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-white outline-none mb-2">
+                    <p class="text-[10px] text-gray-400">Jika dikosongkan, Hikam AI tetap aktif menggunakan mode cerdas bawaan. Jika diisi dengan Gemini API Key, AI akan terhubung langsung ke server Google AI Studio untuk menjawab semua pertanyaan di dunia!</p>
+                </div>
+                <button onclick="saveApiKey()" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 rounded-lg transition">Simpan Konfigurasi AI</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Dinamis & API -->
+    <script>
+        const ADMIN_PASSCODE = "HabibiMuhamad123";
+
+        // Default Data Store
+        let ffItems = JSON.parse(localStorage.getItem('hakim_ff')) || [
+            { name: "Akun FF Old Season / SG2 Ungu", price: "Rp 150.000", desc: "Full Skin Legend, Aman & Bind Aman" },
+            { name: "Akun FF Sultan Max Emote", price: "Rp 300.000", desc: "Level 75, Winrate Tinggi, Full Pass" }
+        ];
+
+        let waItems = JSON.parse(localStorage.getItem('hakim_wa')) || [
+            { name: "Nomer WA OTP / Verifikasi Instant", price: "Rp 10.000 / Nomer", desc: "Negara Indo / Luar Negeri (Aman)" },
+            { name: "Nomer WA Bisnis / For Business", price: "Rp 25.000", desc: "Awet, anti banned, garansi aktif" }
+        ];
+
+        let socialLinks = JSON.parse(localStorage.getItem('hakim_socials')) || {
+            wa: "https://wa.me/6281234567890",
+            discord: "https://discord.gg/yourinvite",
+            ig: "https://instagram.com/yourusername",
+            tiktok: "https://tiktok.com/@yourusername"
+        };
+
+        let siteConfig = JSON.parse(localStorage.getItem('hakim_config')) || {
+            title: "Hakim Socials & Hikam AI Office",
+            profile: "HAKIM OFFICIAL HUB",
+            bg: ""
+        };
+
+        let geminiApiKey = localStorage.getItem('hakim_gemini_key') || "";
+
+        // Inisialisasi saat web dibuka
+        window.onload = function() {
+            applyConfig();
+            renderShop();
+        };
+
+        function applyConfig() {
+            document.getElementById('page-title').innerText = siteConfig.title;
+            document.getElementById('display-profile-name').innerText = siteConfig.profile;
+            document.getElementById('input-web-title').value = siteConfig.title;
+            document.getElementById('input-profile-name').value = siteConfig.profile;
+
+            if(siteConfig.bg) {
+                document.getElementById('main-body').style.backgroundImage = `linear-gradient(rgba(3, 7, 18, 0.82), rgba(3, 7, 18, 0.82)), url('${siteConfig.bg}')`;
+            }
+
+            document.getElementById('link-wa').href = socialLinks.wa;
+            document.getElementById('link-discord').href = socialLinks.discord;
+            document.getElementById('link-ig').href = socialLinks.ig;
+            document.getElementById('link-tiktok').href = socialLinks.tiktok;
+
+            document.getElementById('input-link-wa').value = socialLinks.wa;
+            document.getElementById('input-link-discord').value = socialLinks.discord;
+            document.getElementById('input-link-ig').value = socialLinks.ig;
+            document.getElementById('input-link-tiktok').value = socialLinks.tiktok;
+            document.getElementById('input-gemini-key').value = geminiApiKey;
+        }
+
+        function renderShop() {
+            let ffHtml = '';
+            ffItems.forEach((item, index) => {
+                ffHtml += `<div class="glass-card rounded-2xl p-4 flex gap-3.5 items-center">
+                    <div class="w-14 h-14 bg-gradient-to-tr from-orange-600 to-amber-500 rounded-xl flex items-center justify-center text-white text-xl font-bold flex-shrink-0 glow-effect"><i class="fa-solid fa-fire"></i></div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-sm text-white">${item.name}</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">${item.desc}</p>
+                        <div class="flex justify-between items-center mt-2">
+                            <span class="text-amber-400 font-extrabold text-xs">${item.price}</span>
+                            <a href="${socialLinks.wa}?text=Halo,%20saya%20mau%20beli%20${encodeURIComponent(item.name)}" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-1 rounded-lg text-xs font-bold transition">Beli via WA</a>
+                        </div>
+                    </div>
+                </div>`;
+            });
+            document.getElementById('ff-list').innerHTML = ffHtml;
+
+            let waHtml = '';
+            waItems.forEach((item, index) => {
+                waHtml += `<div class="glass-card rounded-2xl p-4 flex gap-3.5 items-center">
+                    <div class="w-14 h-14 bg-gradient-to-tr from-emerald-600 to-teal-500 rounded-xl flex items-center justify-center text-white text-xl font-bold flex-shrink-0 glow-effect"><i class="fa-solid fa-sim-card"></i></div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-sm text-white">${item.name}</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">${item.desc}</p>
+                        <div class="flex justify-between items-center mt-2">
+                            <span class="text-emerald-400 font-extrabold text-xs">${item.price}</span>
+                            <a href="${socialLinks.wa}?text=Halo,%20saya%20mau%20beli%20${encodeURIComponent(item.name)}" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1 rounded-lg text-xs font-bold transition">Beli via WA</a>
+                        </div>
+                    </div>
+                </div>`;
+            });
+            document.getElementById('wa-list').innerHTML = waHtml;
+        }
+
+        // Passcode Control
+        function openPasscodeModal() {
+            document.getElementById('input-key').value = '';
+            document.getElementById('error-msg').classList.add('hidden');
+            document.getElementById('modal-passcode').classList.remove('hidden');
+        }
+        function closePasscodeModal() { document.getElementById('modal-passcode').classList.add('hidden'); }
+        function checkPasscode() {
+            if (document.getElementById('input-key').value === ADMIN_PASSCODE) {
+                closePasscodeModal();
+                document.getElementById('modal-admin').classList.remove('hidden');
+            } else {
+                document.getElementById('error-msg').classList.remove('hidden');
+            }
+        }
+        function closeAdminModal() { document.getElementById('modal-admin').classList.add('hidden'); }
+
+        // Admin Tabs Switcher
+        function switchAdminTab(tab) {
+            ['tools', 'socials', 'shop', 'ai'].forEach(t => {
+                document.getElementById('adm-section-' + t).classList.add('hidden');
+                document.getElementById('adm-btn-' + t).className = "py-1.5 rounded-lg text-gray-400 hover:text-white";
+            });
+            document.getElementById('adm-section-' + tab).classList.remove('hidden');
+            document.getElementById('adm-btn-' + tab).className = "py-1.5 rounded-lg bg-blue-600 text-white";
+        }
+
+        // Save Functions
+        function saveTools() {
+            siteConfig.title = document.getElementById('input-web-title').value;
+            siteConfig.profile = document.getElementById('input-profile-name').value;
+            localStorage.setItem('hakim_config', JSON.stringify(siteConfig));
+            applyConfig();
+            alert("Tools & Profil berhasil disimpan!");
+        }
+
+        function saveSocials() {
+            socialLinks.wa = document.getElementById('input-link-wa').value;
+            socialLinks.discord = document.getElementById('input-link-discord').value;
+            socialLinks.ig = document.getElementById('input-link-ig').value;
+            socialLinks.tiktok = document.getElementById('input-link-tiktok').value;
+            localStorage.setItem('hakim_socials', JSON.stringify(socialLinks));
+            applyConfig();
+            renderShop();
+            alert("Tautan Sosial berhasil diperbarui!");
+        }
+
+        function addFFProduct() {
+            let name = document.getElementById('shop-ff-name').value;
+            let price = document.getElementById('shop-ff-price').value;
+            if(!name || !price) return alert("Isi nama dan harga!");
+            ffItems.push({ name: name, price: price, desc: "Ready Stock • Garansi Aman" });
+            localStorage.setItem('hakim_ff', JSON.stringify(ffItems));
+            document.getElementById('shop-ff-name').value = '';
+            document.getElementById('shop-ff-price').value = '';
+            renderShop();
+            alert("Akun FF berhasil ditambahkan ke etalase!");
+        }
+
+        function addWAProduct() {
+            let name = document.getElementById('shop-wa-name').value;
+            let price = document.getElementById('shop-wa-price').value;
+            if(!name || !price) return alert("Isi nama dan harga!");
+            waItems.push({ name: name, price: price, desc: "OTP Instant • Garansi Aktif" });
+            localStorage.setItem('hakim_wa', JSON.stringify(waItems));
+            document.getElementById('shop-wa-name').value = '';
+            document.getElementById('shop-wa-price').value = '';
+            renderShop();
+            alert("Nomor WA berhasil ditambahkan ke etalase!");
+        }
+
+        function saveApiKey() {
+            geminiApiKey = document.getElementById('input-gemini-key').value;
+            localStorage.setItem('hakim_gemini_key', geminiApiKey);
+            alert("API Key Google AI Studio berhasil disimpan!");
+        }
+
+        function changeBackground(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    siteConfig.bg = e.target.result;
+                    localStorage.setItem('hakim_config', JSON.stringify(siteConfig));
+                    applyConfig();
+                    alert("Background berhasil diganti dari galeri!");
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // FULL AI ENGINE (GOOGLE AI STUDIO / GEMINI API INTEGRATION)
+        async function sendAiMessage() {
+            const inputField = document.getElementById('ai-input');
+            const messageText = inputField.value.trim();
+            if (!messageText) return;
+
+            const chatContainer = document.getElementById('chat-messages');
+
+            // User Bubble
+            const userBubble = document.createElement('div');
+            userBubble.className = "bg-blue-600 text-white p-3 rounded-xl ml-auto max-w-[85%] text-right";
+            userBubble.textContent = messageText;
+            chatContainer.appendChild(userBubble);
+
+            inputField.value = '';
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            // Loading AI Bubble
+            const aiBubble = document.createElement('div');
+            aiBubble.className = "bg-slate-900/90 p-3 rounded-xl border border-slate-800 text-gray-400 max-w-[85%]";
+            aiBubble.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-1"></i> Hikam Office sedang berpikir...`;
+            chatContainer.appendChild(aiBubble);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            try {
+                let replyText = "";
+                if (geminiApiKey) {
+                    // Call Google Gemini API directly
+                    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${geminiApiKey}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            contents: [{ parts: [{ text: messageText }] }]
+                        })
+                    });
+                    const data = await response.json();
+                    if(data.candidates && data.candidates[0].content.parts[0].text) {
+                        replyText = data.candidates[0].content.parts[0].text;
+                    } else {
+                        replyText = "Maaf, terjadi kesalahan saat menghubungi server Google AI Studio.";
+                    }
+                } else {
+                    // Fallback smart general knowledge responder if API key is not set yet
+                    await new Promise(r => setTimeout(r, 1000));
+                    const low = messageText.toLowerCase();
+                    if(low.includes('siapa kamu') || low.includes('nama kamu')) {
+                        replyText = "Saya adalah Hikam Office, AI Assistant profesional yang terintegrasi dengan teknologi Google AI Studio.";
+                    } else if(low.includes('ff') || low.includes('akun')) {
+                        replyText = "Untuk jual beli Akun Free Fire terpercaya, Anda bisa langsung mengecek menu 'Akun FF' di atas.";
+                    } else if(low.includes('wa') || low.includes('nomor')) {
+                        replyText = "Kami menyediakan layanan pembelian nomor WhatsApp siap pakai di menu 'Nomer WA'.";
+                    } else {
+                        replyText = `Halo! Pertanyaan bagus mengenai "${messageText}". Agar saya bisa menjawab SEMUA pertanyaan di dunia secara bebas tanpa batasan, silakan masukkan *Google AI Studio API Key* Anda melalui **Panel Admin -> AI Engine**!`;
+                    }
+                }
+                aiBubble.className = "bg-slate-900/90 p-3 rounded-xl border border-slate-800 text-gray-200 max-w-[85%]";
+                aiBubble.textContent = replyText;
+            } catch (error) {
+                aiBubble.className = "bg-slate-900/90 p-3 rounded-xl border border-red-500/50 text-red-300 max-w-[85%]";
+                aiBubble.textContent = "Koneksi ke server AI gagal. Periksa kembali API Key Anda di Panel Admin.";
+            }
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function switchTab(tab) {
+            ['socials', 'magazine', 'storeff', 'nomorwa', 'hikamai'].forEach(s => {
+                document.getElementById('section-' + s).classList.add('hidden');
+                document.getElementById('tab-btn-' + s).className = "py-2 px-1 text-[11px] font-bold rounded-xl text-gray-400 hover:text-white transition";
+            });
+            document.getElementById('section-' + tab).classList.remove('hidden');
+            document.getElementById('tab-btn-' + tab).className = "py-2 px-1 text-[11px] font-bold rounded-xl bg-blue-600 text-white transition glow-effect";
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Hakim Socials & Hikam AI Office</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #030712;
+            color: #f3f4f6;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            background: radial-gradient(circle at 50% 10%, #1e1b4b 0%, #090d16 50%, #030712 100%);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+        }
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+        }
+        .gojo-glow-text {
+            text-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen text-gray-100 pb-12" id="main-body">
+
+    <div class="relative z-10 max-w-xl mx-auto px-4 py-6">
+
+        <!-- Top Bar / Admin Access Button -->
+        <div class="flex justify-between items-center mb-6">
+            <span class="text-xs uppercase tracking-widest text-blue-400 font-bold flex items-center gap-1.5">
+                <i class="fa-solid fa-infinity text-blue-500"></i> Hakim Ecosystem
+            </span>
+            <button onclick="openPasscodeModal()" class="text-xs bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-3.5 py-1.5 rounded-full font-bold transition shadow-lg shadow-blue-500/20 flex items-center gap-1.5">
+                <i class="fa-solid fa-key text-yellow-300"></i> Panel Admin
+            </button>
+        </div>
+
+        <!-- Profil Header -->
+        <div class="text-center mb-6">
+            <div class="relative w-24 h-24 mx-auto mb-3 rounded-full bg-gradient-to-tr from-cyan-500 via-blue-600 to-indigo-600 p-1 glow-effect flex items-center justify-center">
+                <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-bolt-lightning text-3xl text-blue-400 gojo-glow-text"></i>
+                </div>
+            </div>
+            <h1 id="display-profile-name" class="text-2xl font-black tracking-wide text-white gojo-glow-text">HAKIM OFFICIAL HUB</h1>
+            <p class="text-xs text-blue-300 mt-1">Socials • Majalah • Store FF • Nomer WA • Hikam AI</p>
+        </div>
+
+        <!-- Navigation Menu Tabs -->
+        <div class="grid grid-cols-5 gap-1 mb-6 bg-slate-900/80 p-1.5 rounded-2xl border border-slate-800 text-center">
+            <button onclick="switchTab('socials')" id="tab-btn-socials" class="py-2 px-1 text-[11px] font-bold rounded-xl bg-blue-600 text-white transition glow-effect">
+                <i class="fa-solid fa-share-nodes block mb-0.5"></i> Socials
+            </button>
+            <button onclick="switchTab('magazine')" id="tab-btn-magazine" class="py-2 px-1 text-[11px] font-bold rounded-xl text-gray-400 hover:text-white transition">
+                <i class="fa-solid fa-book-quran block mb-0.5"></i> Majalah
+            </button>
+            <button onclick="switchTab('storeff')" id="tab-btn-storeff" class="py-2 px-1 text-[11px] font-bold rounded-xl text-gray-400 hover:text-white transition">
+                <i class="fa-solid fa-gamepad block mb-0.5"></i> Akun FF
+            </button>
+            <button onclick="switchTab('nomorwa')" id="tab-btn-nomorwa" class="py-2 px-1 text-[11px] font-bold rounded-xl text-gray-400 hover:text-white transition">
+                <i class="fa-brands fa-whatsapp block mb-0.5"></i> Nomer WA
+            </button>
+            <button onclick="switchTab('hikamai')" id="tab-btn-hikamai" class="py-2 px-1 text-[11px] font-bold rounded-xl text-gray-400 hover:text-white transition">
+                <i class="fa-solid fa-brain block mb-0.5 text-cyan-400"></i> Hikam AI
+            </button>
+        </div>
+
+        <!-- TAB 1: WEB SOCIALS -->
+        <div id="section-socials" class="space-y-3">
+            <div class="text-xs font-bold text-blue-400 uppercase tracking-wider px-1 pt-1"><i class="fa-solid fa-globe"></i> Web Social Khusus</div>
+
+            <a id="link-wa" href="https://wa.me/6281234567890" target="_blank" class="glass-card rounded-2xl p-3.5 flex items-center justify-between hover:border-emerald-400 transition transform hover:-translate-y-0.5">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white">WhatsApp & Grup Utama</h3>
+                        <p class="text-xs text-gray-400">Hubungi admin & gabung komunitas WA</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </a>
+
+            <a id="link-discord" href="https://discord.gg/yourinvite" target="_blank" class="glass-card rounded-2xl p-3.5 flex items-center justify-between hover:border-indigo-400 transition transform hover:-translate-y-0.5">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl"><i class="fa-brands fa-discord"></i></div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white">Discord Server</h3>
+                        <p class="text-xs text-gray-400">Gabung mabar, voice chat & komunitas</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </a>
+
+            <a id="link-ig" href="https://instagram.com/yourusername" target="_blank" class="glass-card rounded-2xl p-3.5 flex items-center justify-between hover:border-pink-500 transition transform hover:-translate-y-0.5">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl"><i class="fa-brands fa-instagram"></i></div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white">Instagram Official</h3>
+                        <p class="text-xs text-gray-400">Info, update & testimoni</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </a>
+
+            <a id="link-tiktok" href="https://tiktok.com/@yourusername" target="_blank" class="glass-card rounded-2xl p-3.5 flex items-center justify-between hover:border-cyan-400 transition transform hover:-translate-y-0.5">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl"><i class="fa-brands fa-tiktok"></i></div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white">TikTok Content</h3>
+                        <p class="text-xs text-gray-400">Video editor & highlights gaming</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-xs"></i>
+            </a>
+        </div>
+
+        <!-- TAB 2: WEB MAJALAH ISLAMI -->
+        <div id="section-magazine" class="hidden space-y-4">
+            <div class="glass-card rounded-2xl p-5 border border-amber-500/30">
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center"><i class="fa-solid fa-kaaba text-sm"></i></div>
+                    <h2 class="text-base font-bold text-amber-300">Keteladanan Nabi Muhammad SAW</h2>
+                </div>
+                <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                    Nabi Muhammad SAW adalah pembawa risalah Islam yang memiliki akhlak agung, penyayang kepada umatnya, serta teladan sempurna dalam kepemimpinan dan kejujuran (*Al-Amin*).
+                </p>
+                <div class="bg-slate-900/80 p-3.5 rounded-xl border border-amber-500/20 mb-3 text-right">
+                    <p class="text-base font-serif text-amber-200 leading-loose mb-1">وَمَآ أَرْسَلْنَٰكَ إِلاَّ رَحْمَةً لِّلْعَٰلَمِينَ</p>
+                    <p class="text-[11px] text-gray-400 text-left italic">"Dan Kami tidak mengutus engkau (Muhammad), melainkan untuk (menjadi) rahmat bagi seluruh alam." <br><span class="text-amber-400 font-semibold">(QS. Al-Anbiya: 107)</span></p>
+                </div>
+                <div class="bg-blue-950/40 p-3 rounded-xl border border-blue-500/20">
+                    <div class="text-[11px] text-blue-300 font-bold mb-1"><i class="fa-solid fa-hands-praying"></i> Shalawat Nabi:</div>
+                    <p class="text-sm font-serif text-center text-blue-100 my-1">اللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ</p>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5 border border-cyan-500/30">
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center"><i class="fa-solid fa-book-bookmark text-sm"></i></div>
+                    <h2 class="text-base font-bold text-cyan-300">Perjuangan Imam Bukhari</h2>
+                </div>
+                <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                    Penyusun kitab Shahih Bukhari yang sangat teliti dalam menyeleksi hadits shahih. Beliau menghabiskan hidupnya demi menjaga kemurnian sunnah Rasulullah SAW.
+                </p>
+                <div class="bg-slate-900/80 p-3.5 rounded-xl border border-cyan-500/20 mb-3 text-right">
+                    <p class="text-sm font-serif text-cyan-200 leading-loose mb-1">إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ</p>
+                    <p class="text-[11px] text-gray-400 text-left italic">"Sesungguhnya amal itu tergantung niatnya..." <br><span class="text-cyan-400 font-semibold">(HR. Bukhari No. 1)</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: WEB SHOP AKUN FF (DINAMIS DARI ADMIN) -->
+        <div id="section-storeff" class="hidden space-y-3">
+            <div class="text-xs font-bold text-blue-400 uppercase tracking-wider px-1 pt-1"><i class="fa-solid fa-gamepad"></i> Web Shop Jual Beli Akun FF</div>
+            <div id="ff-list" class="space-y-3">
+                <!-- Data akan dimuat otomatis dari localStorage -->
+            </div>
+        </div>
+
+        <!-- TAB 4: WEB KHUSUS BELI NOMER WA (DINAMIS DARI ADMIN) -->
+        <div id="section-nomorwa" class="hidden space-y-3">
+            <div class="text-xs font-bold text-blue-400 uppercase tracking-wider px-1 pt-1"><i class="fa-brands fa-whatsapp"></i> Web Khusus Beli Nomer WA</div>
+            <div id="wa-list" class="space-y-3">
+                <!-- Data akan dimuat otomatis dari localStorage -->
+            </div>
+        </div>
+
+        <!-- TAB 5: HIKAM OFFICE AI (GOOGLE AI STUDIO CONNECTED) -->
+        <div id="section-hikamai" class="hidden space-y-3">
+            <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider px-1 pt-1 flex items-center justify-between">
+                <span><i class="fa-solid fa-brain"></i> Hikam Office AI (Gemini Studio)</span>
+                <span id="ai-status" class="text-[10px] bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">Ready Online</span>
+            </div>
+
+            <div class="glass-card rounded-2xl p-4 flex flex-col h-[400px] border border-cyan-500/40">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-cyan-400 animate-pulse"></div>
+                        <span class="text-xs font-bold text-white">Hikam Office Assistant</span>
+                    </div>
+                    <span class="text-[10px] text-gray-400">Tanya apa saja tentang dunia!</span>
+                </div>
+
+                <div id="chat-messages" class="flex-1 overflow-y-auto space-y-3 pr-1 text-xs">
+                    <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800 text-gray-200 max-w-[85%]">
+                        Halo! Saya **Hikam Office**, AI Assistant pintar yang terhubung ke Google AI Studio. Saya bisa menjawab pertanyaan apa saja di dunia ini—mulai dari ilmu pengetahuan, agama, coding, hingga curhat! Silakan ketik pertanyaan Anda.
+                    </div>
+                </div>
+
+                <div class="pt-3 border-t border-slate-800 flex gap-2">
+                    <input type="text" id="ai-input" placeholder="Tulis pertanyaan apa saja..." onkeypress="if(event.key==='Enter') sendAiMessage()" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-cyan-500 outline-none">
+                    <button onclick="sendAiMessage()" class="bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition glow-effect">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center text-[11px] text-gray-500 mt-10">
+            © 2026 Hakim Hub. Powered by Google AI Studio & Gojo Theme.
+        </div>
+    </div>
+
+    <!-- MODAL INPUT PASSCODE -->
+    <div id="modal-passcode" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-sm rounded-2xl p-6 relative border border-blue-500/50 text-center glow-effect">
+            <button onclick="closePasscodeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center text-xl border border-blue-500/40"><i class="fa-solid fa-shield-halved"></i></div>
+            <h2 class="text-base font-bold text-white mb-1">Akses Panel Admin</h2>
+            <p class="text-xs text-gray-400 mb-4">Masukkan Passcode Keamanan:</p>
+            <input type="password" id="input-key" placeholder="Ketik Passcode..." class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-center text-white text-sm focus:border-blue-500 outline-none mb-3">
+            <p id="error-msg" class="text-[11px] text-red-400 font-semibold mb-3 hidden"><i class="fa-solid fa-circle-exclamation mr-1"></i> Passcode Salah!</p>
+            <div class="flex gap-2">
+                <button onclick="closePasscodeModal()" class="flex-1 bg-slate-800 hover:bg-slate-700 text-gray-300 text-xs font-bold py-2.5 rounded-xl transition">Batal</button>
+                <button onclick="checkPasscode()" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold py-2.5 rounded-xl transition glow-effect">Masuk</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PANEL ADMIN LENGKAP (CMS MANAGEMENT) -->
+    <div id="modal-admin" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-lg rounded-2xl p-6 relative border border-blue-500/50 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+
+            <div class="flex items-center gap-2 mb-4">
+                <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center"><i class="fa-solid fa-sliders text-xs"></i></div>
+                <h2 class="text-sm font-bold text-white">Dashboard Admin CMS (Hakim Hub)</h2>
+            </div>
+
+            <!-- Tab Admin Menu -->
+            <div class="grid grid-cols-4 gap-1 mb-4 bg-slate-900 p-1 rounded-xl text-center text-[10px] font-bold">
+                <button onclick="switchAdminTab('tools')" id="adm-btn-tools" class="py-1.5 rounded-lg bg-blue-600 text-white">Tools & Profil</button>
+                <button onclick="switchAdminTab('socials')" id="adm-btn-socials" class="py-1.5 rounded-lg text-gray-400 hover:text-white">Social Links</button>
+                <button onclick="switchAdminTab('shop')" id="adm-btn-shop" class="py-1.5 rounded-lg text-gray-400 hover:text-white">Shop Produk</button>
+                <button onclick="switchAdminTab('ai')" id="adm-btn-ai" class="py-1.5 rounded-lg text-gray-400 hover:text-white">AI Engine</button>
+            </div>
+
+            <!-- ADMIN TAB 1: TOOLS & PROFIL -->
+            <div id="adm-section-tools" class="space-y-3 text-xs">
+                <div class="bg-slate-900/80 p-3 rounded-xl border border-blue-500/30">
+                    <label class="block text-blue-300 font-bold mb-1"><i class="fa-solid fa-image mr-1"></i> Ganti Background Website (Dari Galeri HP)</label>
+                    <input type="file" id="bg-file-input" accept="image/*" onchange="changeBackground(event)" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-white text-xs file:mr-3 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-blue-600 file:text-white hover:file:bg-blue-500 outline-none cursor-pointer">
+                </div>
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-1">Nama Web / Judul Browser</label>
+                    <input type="text" id="input-web-title" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                </div>
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-1">Nama Profil Utama</label>
+                    <input type="text" id="input-profile-name" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                </div>
+                <button onclick="saveTools()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 rounded-lg transition">Simpan Pengaturan Tools</button>
+            </div>
+
+            <!-- ADMIN TAB 2: SOCIAL LINKS -->
+            <div id="adm-section-socials" class="space-y-3 text-xs hidden">
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-1">Link WhatsApp Utama</label>
+                    <input type="text" id="input-link-wa" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                </div>
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-1">Link Discord Server</label>
+                    <input type="text" id="input-link-discord" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                </div>
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-1">Link Instagram</label>
+                    <input type="text" id="input-link-ig" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                </div>
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-1">Link TikTok</label>
+                    <input type="text" id="input-link-tiktok" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                </div>
+                <button onclick="saveSocials()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 rounded-lg transition">Simpan Tautan Sosial</button>
+            </div>
+
+            <!-- ADMIN TAB 3: SHOP PRODUK (FF & NOMOR WA) -->
+            <div id="adm-section-shop" class="space-y-3 text-xs hidden">
+                <div class="border-b border-slate-800 pb-2">
+                    <p class="font-bold text-amber-400 mb-1">Tambah Produk Akun FF Baru</p>
+                    <input type="text" id="shop-ff-name" placeholder="Nama Akun FF" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 mb-1.5 text-white outline-none">
+                    <input type="text" id="shop-ff-price" placeholder="Harga (Cth: Rp 150.000)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 mb-1.5 text-white outline-none">
+                    <button onclick="addFFProduct()" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-1.5 rounded-lg">Tambah ke Katalog FF</button>
+                </div>
+                <div>
+                    <p class="font-bold text-emerald-400 mb-1">Tambah Produk Nomor WA Baru</p>
+                    <input type="text" id="shop-wa-name" placeholder="Jenis Nomor WA (Cth: Nomer OTP Indo)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 mb-1.5 text-white outline-none">
+                    <input type="text" id="shop-wa-price" placeholder="Harga (Cth: Rp 10.000)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 mb-1.5 text-white outline-none">
+                    <button onclick="addWAProduct()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-1.5 rounded-lg">Tambah ke Katalog Nomer WA</button>
+                </div>
+            </div>
+
+            <!-- ADMIN TAB 4: AI ENGINE CONFIG -->
+            <div id="adm-section-ai" class="space-y-3 text-xs hidden">
+                <div class="bg-slate-900 p-3 rounded-xl border border-cyan-500/30">
+                    <label class="block text-cyan-300 font-bold mb-1">Google AI Studio API Key</label>
+                    <input type="password" id="input-gemini-key" placeholder="Tempel API Key Gemini di sini..." class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-white outline-none mb-2">
+                    <p class="text-[10px] text-gray-400">Jika dikosongkan, Hikam AI tetap aktif menggunakan mode cerdas bawaan. Jika diisi dengan Gemini API Key, AI akan terhubung langsung ke server Google AI Studio untuk menjawab semua pertanyaan di dunia!</p>
+                </div>
+                <button onclick="saveApiKey()" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 rounded-lg transition">Simpan Konfigurasi AI</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Dinamis & API -->
+    <script>
+        const ADMIN_PASSCODE = "HabibiMuhamad123";
+
+        // Default Data Store
+        let ffItems = JSON.parse(localStorage.getItem('hakim_ff')) || [
+            { name: "Akun FF Old Season / SG2 Ungu", price: "Rp 150.000", desc: "Full Skin Legend, Aman & Bind Aman" },
+            { name: "Akun FF Sultan Max Emote", price: "Rp 300.000", desc: "Level 75, Winrate Tinggi, Full Pass" }
+        ];
+
+        let waItems = JSON.parse(localStorage.getItem('hakim_wa')) || [
+            { name: "Nomer WA OTP / Verifikasi Instant", price: "Rp 10.000 / Nomer", desc: "Negara Indo / Luar Negeri (Aman)" },
+            { name: "Nomer WA Bisnis / For Business", price: "Rp 25.000", desc: "Awet, anti banned, garansi aktif" }
+        ];
+
+        let socialLinks = JSON.parse(localStorage.getItem('hakim_socials')) || {
+            wa: "https://wa.me/6281234567890",
+            discord: "https://discord.gg/yourinvite",
+            ig: "https://instagram.com/yourusername",
+            tiktok: "https://tiktok.com/@yourusername"
+        };
+
+        let siteConfig = JSON.parse(localStorage.getItem('hakim_config')) || {
+            title: "Hakim Socials & Hikam AI Office",
+            profile: "HAKIM OFFICIAL HUB",
+            bg: ""
+        };
+
+        let geminiApiKey = localStorage.getItem('hakim_gemini_key') || "";
+
+        // Inisialisasi saat web dibuka
+        window.onload = function() {
+            applyConfig();
+            renderShop();
+        };
+
+        function applyConfig() {
+            document.getElementById('page-title').innerText = siteConfig.title;
+            document.getElementById('display-profile-name').innerText = siteConfig.profile;
+            document.getElementById('input-web-title').value = siteConfig.title;
+            document.getElementById('input-profile-name').value = siteConfig.profile;
+
+            if(siteConfig.bg) {
+                document.getElementById('main-body').style.backgroundImage = `linear-gradient(rgba(3, 7, 18, 0.82), rgba(3, 7, 18, 0.82)), url('${siteConfig.bg}')`;
+            }
+
+            document.getElementById('link-wa').href = socialLinks.wa;
+            document.getElementById('link-discord').href = socialLinks.discord;
+            document.getElementById('link-ig').href = socialLinks.ig;
+            document.getElementById('link-tiktok').href = socialLinks.tiktok;
+
+            document.getElementById('input-link-wa').value = socialLinks.wa;
+            document.getElementById('input-link-discord').value = socialLinks.discord;
+            document.getElementById('input-link-ig').value = socialLinks.ig;
+            document.getElementById('input-link-tiktok').value = socialLinks.tiktok;
+            document.getElementById('input-gemini-key').value = geminiApiKey;
+        }
+
+        function renderShop() {
+            let ffHtml = '';
+            ffItems.forEach((item, index) => {
+                ffHtml += `<div class="glass-card rounded-2xl p-4 flex gap-3.5 items-center">
+                    <div class="w-14 h-14 bg-gradient-to-tr from-orange-600 to-amber-500 rounded-xl flex items-center justify-center text-white text-xl font-bold flex-shrink-0 glow-effect"><i class="fa-solid fa-fire"></i></div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-sm text-white">${item.name}</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">${item.desc}</p>
+                        <div class="flex justify-between items-center mt-2">
+                            <span class="text-amber-400 font-extrabold text-xs">${item.price}</span>
+                            <a href="${socialLinks.wa}?text=Halo,%20saya%20mau%20beli%20${encodeURIComponent(item.name)}" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-1 rounded-lg text-xs font-bold transition">Beli via WA</a>
+                        </div>
+                    </div>
+                </div>`;
+            });
+            document.getElementById('ff-list').innerHTML = ffHtml;
+
+            let waHtml = '';
+            waItems.forEach((item, index) => {
+                waHtml += `<div class="glass-card rounded-2xl p-4 flex gap-3.5 items-center">
+                    <div class="w-14 h-14 bg-gradient-to-tr from-emerald-600 to-teal-500 rounded-xl flex items-center justify-center text-white text-xl font-bold flex-shrink-0 glow-effect"><i class="fa-solid fa-sim-card"></i></div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-sm text-white">${item.name}</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">${item.desc}</p>
+                        <div class="flex justify-between items-center mt-2">
+                            <span class="text-emerald-400 font-extrabold text-xs">${item.price}</span>
+                            <a href="${socialLinks.wa}?text=Halo,%20saya%20mau%20beli%20${encodeURIComponent(item.name)}" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1 rounded-lg text-xs font-bold transition">Beli via WA</a>
+                        </div>
+                    </div>
+                </div>`;
+            });
+            document.getElementById('wa-list').innerHTML = waHtml;
+        }
+
+        // Passcode Control
+        function openPasscodeModal() {
+            document.getElementById('input-key').value = '';
+            document.getElementById('error-msg').classList.add('hidden');
+            document.getElementById('modal-passcode').classList.remove('hidden');
+        }
+        function closePasscodeModal() { document.getElementById('modal-passcode').classList.add('hidden'); }
+        function checkPasscode() {
+            if (document.getElementById('input-key').value === ADMIN_PASSCODE) {
+                closePasscodeModal();
+                document.getElementById('modal-admin').classList.remove('hidden');
+            } else {
+                document.getElementById('error-msg').classList.remove('hidden');
+            }
+        }
+        function closeAdminModal() { document.getElementById('modal-admin').classList.add('hidden'); }
+
+        // Admin Tabs Switcher
+        function switchAdminTab(tab) {
+            ['tools', 'socials', 'shop', 'ai'].forEach(t => {
+                document.getElementById('adm-section-' + t).classList.add('hidden');
+                document.getElementById('adm-btn-' + t).className = "py-1.5 rounded-lg text-gray-400 hover:text-white";
+            });
+            document.getElementById('adm-section-' + tab).classList.remove('hidden');
+            document.getElementById('adm-btn-' + tab).className = "py-1.5 rounded-lg bg-blue-600 text-white";
+        }
+
+        // Save Functions
+        function saveTools() {
+            siteConfig.title = document.getElementById('input-web-title').value;
+            siteConfig.profile = document.getElementById('input-profile-name').value;
+            localStorage.setItem('hakim_config', JSON.stringify(siteConfig));
+            applyConfig();
+            alert("Tools & Profil berhasil disimpan!");
+        }
+
+        function saveSocials() {
+            socialLinks.wa = document.getElementById('input-link-wa').value;
+            socialLinks.discord = document.getElementById('input-link-discord').value;
+            socialLinks.ig = document.getElementById('input-link-ig').value;
+            socialLinks.tiktok = document.getElementById('input-link-tiktok').value;
+            localStorage.setItem('hakim_socials', JSON.stringify(socialLinks));
+            applyConfig();
+            renderShop();
+            alert("Tautan Sosial berhasil diperbarui!");
+        }
+
+        function addFFProduct() {
+            let name = document.getElementById('shop-ff-name').value;
+            let price = document.getElementById('shop-ff-price').value;
+            if(!name || !price) return alert("Isi nama dan harga!");
+            ffItems.push({ name: name, price: price, desc: "Ready Stock • Garansi Aman" });
+            localStorage.setItem('hakim_ff', JSON.stringify(ffItems));
+            document.getElementById('shop-ff-name').value = '';
+            document.getElementById('shop-ff-price').value = '';
+            renderShop();
+            alert("Akun FF berhasil ditambahkan ke etalase!");
+        }
+
+        function addWAProduct() {
+            let name = document.getElementById('shop-wa-name').value;
+            let price = document.getElementById('shop-wa-price').value;
+            if(!name || !price) return alert("Isi nama dan harga!");
+            waItems.push({ name: name, price: price, desc: "OTP Instant • Garansi Aktif" });
+            localStorage.setItem('hakim_wa', JSON.stringify(waItems));
+            document.getElementById('shop-wa-name').value = '';
+            document.getElementById('shop-wa-price').value = '';
+            renderShop();
+            alert("Nomor WA berhasil ditambahkan ke etalase!");
+        }
+
+        function saveApiKey() {
+            geminiApiKey = document.getElementById('input-gemini-key').value;
+            localStorage.setItem('hakim_gemini_key', geminiApiKey);
+            alert("API Key Google AI Studio berhasil disimpan!");
+        }
+
+        function changeBackground(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    siteConfig.bg = e.target.result;
+                    localStorage.setItem('hakim_config', JSON.stringify(siteConfig));
+                    applyConfig();
+                    alert("Background berhasil diganti dari galeri!");
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // FULL AI ENGINE (GOOGLE AI STUDIO / GEMINI API INTEGRATION)
+        async function sendAiMessage() {
+            const inputField = document.getElementById('ai-input');
+            const messageText = inputField.value.trim();
+            if (!messageText) return;
+
+            const chatContainer = document.getElementById('chat-messages');
+
+            // User Bubble
+            const userBubble = document.createElement('div');
+            userBubble.className = "bg-blue-600 text-white p-3 rounded-xl ml-auto max-w-[85%] text-right";
+            userBubble.textContent = messageText;
+            chatContainer.appendChild(userBubble);
+
+            inputField.value = '';
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            // Loading AI Bubble
+            const aiBubble = document.createElement('div');
+            aiBubble.className = "bg-slate-900/90 p-3 rounded-xl border border-slate-800 text-gray-400 max-w-[85%]";
+            aiBubble.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-1"></i> Hikam Office sedang berpikir...`;
+            chatContainer.appendChild(aiBubble);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            try {
+                let replyText = "";
+                if (geminiApiKey) {
+                    // Call Google Gemini API directly
+                    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${geminiApiKey}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            contents: [{ parts: [{ text: messageText }] }]
+                        })
+                    });
+                    const data = await response.json();
+                    if(data.candidates && data.candidates[0].content.parts[0].text) {
+                        replyText = data.candidates[0].content.parts[0].text;
+                    } else {
+                        replyText = "Maaf, terjadi kesalahan saat menghubungi server Google AI Studio.";
+                    }
+                } else {
+                    // Fallback smart general knowledge responder if API key is not set yet
+                    await new Promise(r => setTimeout(r, 1000));
+                    const low = messageText.toLowerCase();
+                    if(low.includes('siapa kamu') || low.includes('nama kamu')) {
+                        replyText = "Saya adalah Hikam Office, AI Assistant profesional yang terintegrasi dengan teknologi Google AI Studio.";
+                    } else if(low.includes('ff') || low.includes('akun')) {
+                        replyText = "Untuk jual beli Akun Free Fire terpercaya, Anda bisa langsung mengecek menu 'Akun FF' di atas.";
+                    } else if(low.includes('wa') || low.includes('nomor')) {
+                        replyText = "Kami menyediakan layanan pembelian nomor WhatsApp siap pakai di menu 'Nomer WA'.";
+                    } else {
+                        replyText = `Halo! Pertanyaan bagus mengenai "${messageText}". Agar saya bisa menjawab SEMUA pertanyaan di dunia secara bebas tanpa batasan, silakan masukkan *Google AI Studio API Key* Anda melalui **Panel Admin -> AI Engine**!`;
+                    }
+                }
+                aiBubble.className = "bg-slate-900/90 p-3 rounded-xl border border-slate-800 text-gray-200 max-w-[85%]";
+                aiBubble.textContent = replyText;
+            } catch (error) {
+                aiBubble.className = "bg-slate-900/90 p-3 rounded-xl border border-red-500/50 text-red-300 max-w-[85%]";
+                aiBubble.textContent = "Koneksi ke server AI gagal. Periksa kembali API Key Anda di Panel Admin.";
+            }
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function switchTab(tab) {
+            ['socials', 'magazine', 'storeff', 'nomorwa', 'hikamai'].forEach(s => {
+                document.getElementById('section-' + s).classList.add('hidden');
+                document.getElementById('tab-btn-' + s).className = "py-2 px-1 text-[11px] font-bold rounded-xl text-gray-400 hover:text-white transition";
+            });
+            document.getElementById('section-' + tab).classList.remove('hidden');
+            document.getElementById('tab-btn-' + tab).className = "py-2 px-1 text-[11px] font-bold rounded-xl bg-blue-600 text-white transition glow-effect";
+        }
+    </script>
+</body>
+</html>
