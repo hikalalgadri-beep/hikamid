@@ -3,192 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIKAM OFFICIAL HUB</title>
+    <title>HikamID Hub</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
         body {
-            background-color: #0b0f19;
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
             color: #ffffff;
+            margin: 0;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            padding: 20px 10px;
+            box-sizing: border-box;
         }
-
-        .header {
+        h1 {
+            margin-bottom: 5px;
             text-align: center;
+        }
+        .nav-links {
             margin-bottom: 20px;
-        }
-
-        .header h1 {
-            font-size: 26px;
-            letter-spacing: 2px;
-            color: #e2e8f0;
-            margin-bottom: 8px;
-        }
-
-        .nav-sub {
-            font-size: 13px;
+            text-align: center;
+            font-size: 14px;
             color: #94a3b8;
-            margin-bottom: 20px;
         }
-
-        /* Widget Container */
-        .ai-card {
-            background: #111827;
-            border: 1px solid #1e293b;
-            border-radius: 16px;
+        .nav-links a {
+            color: #38bdf8;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .chat-container {
             width: 100%;
-            max-width: 480px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
+            max-width: 600px;
+            background: #1e293b;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             display: flex;
             flex-direction: column;
+            overflow: hidden;
+            flex-grow: 1;
+            max-height: 550px;
         }
-
-        .ai-header {
-            padding: 15px 20px;
-            border-bottom: 1px solid #1e293b;
+        .chat-header {
+            background: #0f172a;
+            padding: 15px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            background-color: #0f172a;
+            justify-content: space-between;
+            border-bottom: 1px solid #334155;
         }
-
-        .ai-title {
+        .chat-header-left {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
-        .ai-title img {
-            width: 38px;
-            height: 38px;
+        .chat-avatar {
+            width: 40px;
+            height: 40px;
+            background: #cbd5e1;
             border-radius: 50%;
-            object-fit: cover;
         }
-
-        .ai-name-box h3 {
-            font-size: 15px;
-            color: #f8fafc;
+        .chat-title {
+            font-weight: bold;
+            font-size: 16px;
         }
-
-        .ai-name-box span {
-            font-size: 11px;
-            color: #64748b;
+        .chat-subtitle {
+            font-size: 12px;
+            color: #94a3b8;
         }
-
         .status-badge {
-            background-color: rgba(16, 185, 129, 0.1);
-            color: #10b981;
-            font-size: 11px;
-            font-weight: 600;
+            background: #065f46;
+            color: #34d399;
+            font-size: 10px;
+            font-weight: bold;
             padding: 4px 8px;
-            border-radius: 12px;
-            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 6px;
         }
-
         .chat-box {
-            height: 380px;
+            flex-grow: 1;
             padding: 15px;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            background-color: #0b0f17;
+            gap: 10px;
         }
-
         .msg {
             max-width: 80%;
             padding: 10px 14px;
-            border-radius: 14px;
+            border-radius: 8px;
             font-size: 14px;
             line-height: 1.4;
-            word-wrap: break-word;
         }
-
         .msg.bot {
-            background-color: #1e293b;
-            color: #f1f5f9;
+            background: #334155;
+            color: #f8fafc;
             align-self: flex-start;
-            border-bottom-left-radius: 2px;
         }
-
         .msg.user {
-            background-color: #2563eb;
+            background: #2563eb;
             color: #ffffff;
             align-self: flex-end;
-            border-bottom-right-radius: 2px;
         }
-
-        .input-area {
-            padding: 15px;
-            background-color: #0f172a;
-            border-top: 1px solid #1e293b;
+        .chat-input-area {
             display: flex;
-            gap: 10px;
+            padding: 12px;
+            background: #0f172a;
+            border-top: 1px solid #334155;
+            gap: 8px;
         }
-
-        .input-area input {
-            flex: 1;
-            background-color: #1e293b;
-            border: 1px solid #334155;
-            color: #ffffff;
-            padding: 10px 14px;
-            border-radius: 8px;
+        .chat-input-area input {
+            flex-grow: 1;
+            background: #1e293b;
+            border: 1px solid #475569;
+            border-radius: 6px;
+            padding: 10px;
+            color: #fff;
             outline: none;
-            font-size: 14px;
         }
-
-        .input-area input::placeholder {
-            color: #64748b;
-        }
-
-        .input-area button {
-            background-color: #2563eb;
+        .chat-input-area button {
+            background: #2563eb;
             color: white;
             border: none;
-            padding: 10px 16px;
-            border-radius: 8px;
+            padding: 0 16px;
+            border-radius: 6px;
+            font-weight: bold;
             cursor: pointer;
-            font-weight: 600;
-            transition: background 0.2s;
         }
-
-        .input-area button:hover {
-            background-color: #1d4ed8;
-        }
-
         .footer-text {
-            margin-top: 20px;
-            font-size: 11px;
-            color: #475569;
+            margin-top: 15px;
+            font-size: 12px;
+            color: #64748b;
             text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>HAKIM OFFICIAL HUB</h1>
-        <div class="nav-sub">Socials • Majalah • Store FF • Download Game • Hikam AI</div>
+    <h1>HAKIM OFFICIAL HUB</h1>
+    <div class="nav-links">
+        <a href="#">Socials</a> &bull; 
+        <a href="#">Majalah</a> &bull; 
+        <a href="#">Store FF</a> &bull; 
+        <a href="#">Download Game</a> &bull; 
+        <a href="#">Hikam AI</a>
     </div>
 
-    <!-- AI Widget Container -->
-    <div class="ai-card">
-        <div class="ai-header">
-            <div class="ai-title">
-                <img src="https://via.placeholder.com/40" alt="Hikam Avatar" id="avatarImg">
-                <div class="ai-name-box">
-                    <h3>Hikam Office</h3>
-                    <span>Tanya apa saja!</span>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="chat-header-left">
+                <div class="chat-avatar"></div>
+                <div>
+                    <div class="chat-title">Hikam Office</div>
+                    <div class="chat-subtitle">Tanya apa saja!</div>
                 </div>
             </div>
             <div class="status-badge">READY ONLINE</div>
@@ -200,40 +169,36 @@
             </div>
         </div>
 
-        <div class="input-area">
+        <div class="chat-input-area">
             <input type="text" id="userInput" placeholder="Tulis pertanyaan..." onkeypress="handleKeyPress(event)">
             <button onclick="sendMessage()">Kirim</button>
         </div>
     </div>
 
     <div class="footer-text">
-        © 2026 HikamID Hub. Powered by Google AI Studio & Gojo Theme.
+        &copy; 2026 HikamID Hub. Powered by Google AI Studio & Gojo Theme.
     </div>
 
     <script type="module">
         import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
-        // Ganti dengan API Key Google AI Studio milik Anda
-        const API_KEY = "PASTE_API_KEY_GOOGLE_STUDIO_DISINI"; 
-        
-        const genAI = new GoogleGenerativeAI(API_KEY);
+        const API_KEY = "AQ.Ab8RN6ID5Ir8QnqVk5knhxyF0ofogZHcGvKp4v4V8T3ThRnXeg";
 
-        // SYSTEM INSTRUCTION (Melihat identitas website & kemampuan umum)
         const systemInstruction = `
-        Kamu adalah "Hikam Office", AI Assistant resmi untuk website HikamID (HAKIM OFFICIAL HUB).
-        
-        Identitas & Pengetahuan Khusus:
-        1. Pemilik / Pengembang: Hikam.
-        2. Website Resmi: HikamID (https://hikalalgadri-beep.github.io/hikamid/).
-        3. Game Buatan Utama: "Run Dino Hikam" (Game seru bergenre runner/dino yang bisa di-download lewat tab Game di website ini atau tautan MediaFire).
-        4. Layanan Lainnya: Socials, Majalah, Store FF, Sewa Bot, dan Download Game.
-        5. Mengenai bukti/konfirmasi WhatsApp Admin: Jika pengguna bertanya tentang transaksi/bukti SS yang belum direspons admin, sampaikan dengan ramah bahwa admin sedang memproses antrean dan mohon ditunggu sebentar.
+Kamu adalah "Hikam Office", AI Assistant resmi untuk website HikamID (HAKIM OFFICIAL HUB).
 
-        Kemampuan & Gaya Bahasa:
-        - Kamu adalah AI generasi canggih yang SERBA TAHU dan BISA MENJAWAB SEMUA PERTANYAAN (pertanyaan umum, pemrograman, matematika, resep, cerita, penjelasan ilmiah, dll).
-        - Gaya bahasa santai, ramah, profesional, cerdas, dan menggunakan bahasa Indonesia yang baik.
-        - Selalu siap membantu tanpa membatasi topik pertanyaan pengguna.
-        `;
+Identitas & Pengetahuan Khusus:
+1. Pemilik / Pengembang: Hikam.
+2. Website Resmi: HikamID (https://hikalalgadri-beep.github.io/hikamid/).
+3. Game Buatan Utama: "Run Dino Hikam" (Game seru bergenre runner/dino yang bisa dimainkan di web).
+4. Layanan Lainnya: Socials, Majalah, Store FF, Sewa Bot, dan Download Game.
+5. Mengenai bukti/konfirmasi WhatsApp Admin: Jika pengguna bertanya tentang transaksi Store FF atau Sewa Bot, arahkan untuk konfirmasi langsung ke WhatsApp Admin Hikam.
+
+Kemampuan & Gaya Bahasa:
+- Kamu adalah AI generasi canggih yang SERBA TAHU dan BISA MENJAWAB SEMUA PERTANYAAN umum maupun khusus.
+- Gaya bahasa santai, ramah, profesional, cerdas, dan menggunakan bahasa Indonesia yang natural.
+- Selalu siap membantu tanpa membatasi topik pertanyaan pengguna.
+`;
 
         const model = genAI.getGenerativeModel({
             model: "gemini-1.5-flash",
@@ -249,7 +214,6 @@
 
             if (!text) return;
 
-            // Tampilkan pesan User
             const userMsg = document.createElement("div");
             userMsg.className = "msg user";
             userMsg.innerText = text;
@@ -257,7 +221,6 @@
             input.value = "";
             chatBox.scrollTop = chatBox.scrollHeight;
 
-            // Tambahkan elemen temporary loading Bot
             const botMsg = document.createElement("div");
             botMsg.className = "msg bot";
             botMsg.innerText = "Ketik jawaban...";
