@@ -3,84 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HikamID Hub</title>
+    <title>Hikam Official Hub</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #0f172a;
+            background-color: #050b14;
             color: #ffffff;
             margin: 0;
-            padding: 20px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
+            background-image: linear-gradient(rgba(5, 11, 20, 0.85), rgba(5, 11, 20, 0.85)), url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
         }
         h1 {
-            margin-bottom: 5px;
+            margin: 10px 0 5px 0;
             text-align: center;
+            font-size: 24px;
+            letter-spacing: 1px;
         }
-        .nav-links {
-            margin-bottom: 20px;
+        .nav-links-text {
+            margin-bottom: 15px;
             text-align: center;
-            font-size: 14px;
+            font-size: 13px;
             color: #94a3b8;
         }
-        .nav-links a {
-            color: #38bdf8;
-            text-decoration: none;
-            margin: 0 5px;
+        .menu-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 600px;
         }
-        .nav-links a:hover {
-            text-decoration: underline;
+        .menu-btn {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            color: #fff;
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            text-decoration: none;
+            min-width: 60px;
+            transition: 0.2s;
+        }
+        .menu-btn.active {
+            background: #2563eb;
+            border-color: #38bdf8;
+        }
+        .menu-btn:hover {
+            background: #334155;
         }
         .chat-container {
             width: 100%;
-            max-width: 600px;
-            background: #1e293b;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            max-width: 550px;
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
             display: flex;
             flex-direction: column;
             overflow: hidden;
             flex-grow: 1;
-            max-height: 550px;
+            max-height: 520px;
         }
-        .chat-header {
-            background: #0f172a;
-            padding: 15px;
+        .chat-header-top {
+            padding: 12px 15px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid #334155;
-        }
-        .chat-header-left {
-            display: flex;
             align-items: center;
-            gap: 10px;
-        }
-        .chat-avatar {
-            width: 40px;
-            height: 40px;
-            background: #cbd5e1;
-            border-radius: 50%;
-        }
-        .chat-title {
-            font-weight: bold;
-            font-size: 16px;
-        }
-        .chat-subtitle {
+            border-bottom: 1px solid #1f2937;
             font-size: 12px;
-            color: #94a3b8;
+            color: #38bdf8;
+            font-weight: bold;
         }
         .status-badge {
             background: #065f46;
             color: #34d399;
             font-size: 10px;
             font-weight: bold;
-            padding: 4px 8px;
+            padding: 3px 8px;
             border-radius: 6px;
+        }
+        .chat-profile {
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1f2937;
+            background: rgba(17, 24, 39, 0.7);
+        }
+        .profile-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #38bdf8;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0f172a;
+            font-weight: bold;
         }
         .chat-box {
             flex-grow: 1;
@@ -88,18 +124,18 @@
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
         }
         .msg {
             max-width: 80%;
             padding: 10px 14px;
-            border-radius: 8px;
-            font-size: 14px;
+            border-radius: 10px;
+            font-size: 13px;
             line-height: 1.4;
         }
         .msg.bot {
-            background: #334155;
-            color: #f8fafc;
+            background: #1f2937;
+            color: #f3f4f6;
             align-self: flex-start;
         }
         .msg.user {
@@ -110,31 +146,35 @@
         .chat-input-area {
             display: flex;
             padding: 12px;
-            background: #0f172a;
-            border-top: 1px solid #334155;
+            background: #111827;
+            border-top: 1px solid #1f2937;
             gap: 8px;
         }
         .chat-input-area input {
             flex-grow: 1;
-            background: #1e293b;
-            border: 1px solid #475569;
-            border-radius: 6px;
-            padding: 10px;
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            padding: 10px 14px;
             color: #fff;
             outline: none;
+            font-size: 13px;
         }
         .chat-input-area button {
-            background: #2563eb;
+            background: #0ea5e9;
             color: white;
             border: none;
-            padding: 0 16px;
-            border-radius: 6px;
-            font-weight: bold;
+            width: 42px;
+            height: 42px;
+            border-radius: 8px;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .footer-text {
             margin-top: 15px;
-            font-size: 12px;
+            font-size: 11px;
             color: #64748b;
             text-align: center;
         }
@@ -143,24 +183,34 @@
 <body>
 
     <h1>HAKIM OFFICIAL HUB</h1>
-    <div class="nav-links">
-        <a href="#">Socials</a> &bull; 
-        <a href="#">Majalah</a> &bull; 
-        <a href="#">Store FF</a> &bull; 
-        <a href="#">Download Game</a> &bull; 
-        <a href="#">Hikam AI</a>
+    <div class="nav-links-text">
+        Socials &bull; Majalah &bull; Store FF &bull; Download Game &bull; Hikam AI
+    </div>
+
+    <!-- Tombol Menu Ikonik -->
+    <div class="menu-buttons">
+        <a href="#" class="menu-btn"><span>🔗</span>Socials</a>
+        <a href="#" class="menu-btn"><span>📖</span>Majalah</a>
+        <a href="#" class="menu-btn"><span>🛒</span>Store FF</a>
+        <a href="#" class="menu-btn"><span>💬</span>Sewa Bot</a>
+        <a href="#" class="menu-btn"><span>🎮</span>Game</a>
+        <a href="#" class="menu-btn active"><span>🤖</span>AI</a>
     </div>
 
     <div class="chat-container">
-        <div class="chat-header">
-            <div class="chat-header-left">
-                <div class="chat-avatar"></div>
+        <div class="chat-header-top">
+            <span>⚡ HIKAM OFFICE (GEMINI STUDIO)</span>
+            <span class="status-badge">READY ONLINE</span>
+        </div>
+
+        <div class="chat-profile">
+            <div class="profile-left">
+                <div class="avatar">HO</div>
                 <div>
-                    <div class="chat-title">Hikam Office</div>
-                    <div class="chat-subtitle">Tanya apa saja!</div>
+                    <div style="font-weight: bold; font-size: 14px;">Hikam Office</div>
+                    <div style="font-size: 11px; color: #9ca3af;">Tanya apa saja!</div>
                 </div>
             </div>
-            <div class="status-badge">READY ONLINE</div>
         </div>
 
         <div class="chat-box" id="chatBox">
@@ -171,7 +221,7 @@
 
         <div class="chat-input-area">
             <input type="text" id="userInput" placeholder="Tulis pertanyaan..." onkeypress="handleKeyPress(event)">
-            <button onclick="sendMessage()">Kirim</button>
+            <button onclick="sendMessage()">➤</button>
         </div>
     </div>
 
@@ -183,6 +233,8 @@
         import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
         const API_KEY = "AQ.Ab8RN6ID5Ir8QnqVk5knhxyF0ofogZHcGvKp4v4V8T3ThRnXeg";
+
+        const genAI = new GoogleGenerativeAI(API_KEY);
 
         const systemInstruction = `
 Kamu adalah "Hikam Office", AI Assistant resmi untuk website HikamID (HAKIM OFFICIAL HUB).
